@@ -13,8 +13,8 @@ pipeline {
   }
     stage('Build') {
       steps {
-        sh 'su -'
-        sh 'mkdir /var/terraform_home/'
+        //sh 'su -'
+        sh 'sudo mkdir /var/terraform_home/'
         sh 'docker run terraform_home:/var/terrafrom_home hashicorp/terraform:latest'
       }
     }
