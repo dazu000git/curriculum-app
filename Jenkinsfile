@@ -14,9 +14,12 @@ pipeline {
     stage('Build') {
       steps {
         sh 'su -'
-        sh 'docker run -p 22:22 -d -v kali_home:/var/kali leplusorg/kali'
-        sh 'docker ps'
+        sh 'docker run -p 22:22 -d -v ansible_home:/var/ansible_home alpine/ansible'
+        sh 'docker ps -a'
       }
+    }
+    stage('Logs') {
+        sh 'docker logs ${h.id}'
     }
   }
 }
