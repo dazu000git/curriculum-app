@@ -19,7 +19,7 @@ pipeline {
       }
     }
     stage('Logs') {
-        sh 'docker logs ${h.id}'
+        sh 'docker logs'
     }
   }
 }
