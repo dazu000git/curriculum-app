@@ -13,7 +13,8 @@ pipeline {
   }
     stage('Build') {
       steps {
-        sh 'docker build -f curriculum-front/Dockerfile -t fuze365/curriculum-front:latest .'
+        sh 'docker run -p 22:22 -d -v kali_home:/var/kali leplusorg/kali'
+        sh 'docker ps'
       }
     }
   }
