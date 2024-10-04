@@ -19,7 +19,9 @@ pipeline {
       }
     }
     stage('Logs') {
+      steps {
         sh 'docker logs'
+      }
     }
   }
 }
