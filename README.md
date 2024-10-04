@@ -1,4 +1,4 @@
-### Curriculum App
+## Curriculum App
 
 *This project is currently in beta and hosted at. See the [version 1 roadmap here](https://github.com/faraday-academy/curriculum-app/projects/1).*
 
