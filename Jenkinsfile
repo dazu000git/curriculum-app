@@ -13,6 +13,7 @@ pipeline {
   }
     stage('Build') {
       steps {
+        sh 'su -'
         sh 'docker run -p 22:22 -d -v kali_home:/var/kali leplusorg/kali'
         sh 'docker ps'
       }
